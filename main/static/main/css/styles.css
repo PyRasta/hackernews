@@ -106,11 +106,12 @@ body{
     padding-left: 26px;
     padding-top: 6px;
 }
-
-.line{
-    height: 2px;
+.footer{
     width: 85%;
     margin: 0px auto;
+}
+.line{
+    height: 2px;
     background-color: #FF6600FF;
 }
 .podval{

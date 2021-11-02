@@ -1,0 +1,32 @@
+@font-face{
+    font-family: Verdana;
+    src: url(../forts/Verdana.ttf) format("tff");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face{
+    font-family: Verdana-Bold;
+    src: url(../forts/Verdana-Bold.ttf) format("tff");
+    font-style: normal;
+    font-weight: normal;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+form{
+    margin-top: 27px;
+}
+.login a{
+    display: block;
+    margin-top: 15px;
+}
+button{
+    margin-top: 25px;
+}
+.create{
+    margin-top: 25px;
+}
+.pole{
+    margin-bottom: 5px;
+}
