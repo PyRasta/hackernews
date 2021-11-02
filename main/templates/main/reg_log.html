@@ -14,11 +14,12 @@
         <b>Login</b>
         <form method="POST">
             {% csrf_token %}
-            username: <input class="pole"> <br>
-            password: <input> <br>
+            username: {{ find_form.username }} <br>
+            password: {{ find_form.password }} <br>
             <button type="submit">
                 login
             </button> <br>
+            {{ find_error }}
         <a href="#">Forgot your password?</a>    
         </form>
     </div>    
@@ -26,14 +27,13 @@
         <b>Create Account</b>
         <form method="POST">
             {% csrf_token %}
-            username: {{ form.name }} <br>
-            password: {{ form.password }} <br>
+            username: {{ create_form.name }} <br>
+            password: {{ create_form.password }} <br>
             <button type="submit">
                 create account
             </button>  
         </form>
-        {{error}}
-    </div>     
-    
+        {{ create_error }}
+    </div>       
 </body>
 </html>

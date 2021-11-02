@@ -1,4 +1,5 @@
-from .models import CreateAccount
+from django.db.models import fields
+from .models import CreateAccount, FindAccount
 from django.forms import ModelForm, TextInput, widgets
 
 
@@ -13,5 +14,17 @@ class CreateForm(ModelForm):
             'password': TextInput(attrs={
                 'type': "password",
             })
+        }
 
+class FindForm(ModelForm):
+    class Meta:
+        model = FindAccount
+        fields = ["username",'password']   
+        widgets = {
+            "username": TextInput(attrs={
+                "class":'pole',
+            }),
+            'password': TextInput(attrs={
+                "type": "password",
+            })
         }

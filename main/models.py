@@ -24,3 +24,14 @@ class CreateAccount(models.Model):
     class Meta:
         verbose_name = "Пользователь"
         verbose_name_plural = "Пользователи"    
+
+class FindAccount(models.Model):
+    username = models.CharField("Авторизированный Пользователь", max_length=30) 
+    password = models.CharField("Пароль", max_length=50)  
+
+    def __srt__(self):
+        return self.username
+
+    class Meta:
+        verbose_name = "Авторизированный Пользователь"
+        verbose_name_plural = " Авторизированные Пользователи"     
