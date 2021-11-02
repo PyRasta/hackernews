@@ -82,7 +82,7 @@ body{
 }
 
 .main{
-    height: 100%;
+    height: 1037px;
     width: 85%;
     margin: 0px auto;
     background-color: #F6F6EFFF;
@@ -90,10 +90,43 @@ body{
 .articls{
     padding-top: 15px;
 }
-.article{
-    height: 30px;
-    font-size: 13.2px;
-}
 .number{
     color: #8E8E8DFF;
+}
+.article{
+    padding-bottom: 10px;
+    font-size: 13.2px;
+}
+.bottom_title{
+    font-size: 10px;
+    padding-left: 18px;
+}
+.more{
+    font-size: 13px;
+    padding-left: 26px;
+    padding-top: 6px;
+}
+
+.line{
+    height: 2px;
+    width: 85%;
+    margin: 0px auto;
+    background-color: #FF6600FF;
+}
+.podval{
+    background-color: #F6F6EFFF;;
+    padding-top: 15px;
+    height: 90px;
+    text-align: center;
+    font-size: 11px;
+}
+.fild{
+    font-size: 13px;
+    padding-top: 18px;
+}
+.fild input{
+    height: 20px;
+    width: 146px;
+    border: 1px solid black;
+    border-radius:3px;
 }
