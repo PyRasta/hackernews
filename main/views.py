@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Article
+from .models import Article, CreateAccount
 from .forms import CreateForm
 
 def index(request):
@@ -7,16 +7,18 @@ def index(request):
     return render(request, 'main/index.html', {'articls': articls})
 
 def logreg(request):
+    flag = True
     error = ''
+    base = CreateAccount.objects.all()
+    form = CreateForm(request.POST)
     if request.method == "POST":
-        form = CreateForm(request.POST)
-        for el in request.POST:
-            if request.POST == el.name:
-                form.save()
-                return redirect("home")
-            else:
-                error = "404"
-
+        username = request.POST['name']
+        for el in base:
+            if el.name == username:
+                error = "Этот пользователь уже есть!!"
+                break 
+        if error == "":
+            form.save()        
     form = CreateForm()
     contex = {
         'form': form,
