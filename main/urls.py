@@ -12,4 +12,6 @@ urlpatterns = [
     path("jobs", views.jobs, name="jobs"),
     path("submit", views.submit, name="submit"),
     path("logreg", views.logreg, name="logreg"),
+    path("logout", views.delete_online, name="logout"),
+
 ]

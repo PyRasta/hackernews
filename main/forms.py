@@ -1,6 +1,6 @@
 from django.db.models import fields
 from .models import CreateAccount, FindAccount
-from django.forms import ModelForm, TextInput, widgets
+from django.forms import ModelForm, TextInput, HiddenInput
 
 
 class CreateForm(ModelForm):
@@ -26,5 +26,5 @@ class FindForm(ModelForm):
             }),
             'password': TextInput(attrs={
                 "type": "password",
-            })
+            }),
         }

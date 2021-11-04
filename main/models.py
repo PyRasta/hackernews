@@ -28,8 +28,9 @@ class CreateAccount(models.Model):
 class FindAccount(models.Model):
     username = models.CharField("Авторизированный Пользователь", max_length=30) 
     password = models.CharField("Пароль", max_length=50)  
+    ip = models.CharField("IP", max_length=50)
 
-    def __srt__(self):
+    def __str__(self):
         return self.username
 
     class Meta:

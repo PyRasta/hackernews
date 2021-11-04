@@ -32,7 +32,12 @@
         </div>
         <div class="registor">
             <span class="panelurl">
-                <a href="{% url 'logreg' %}" class="reg">login</a>
+                {% if check.flag == True %}
+                    <a href="#">{{check.username}}</a>   
+                    <a href="{% url 'logout' %}" class="reg">loginout</a>
+                {% else %}    
+                    <a href="{% url 'logreg' %}" class="reg">login</a>
+                {% endif %}    
             </span>
         </div>
     </header>
