@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*:before,*:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display:block;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0}
+a, a:visited{
+    text-decoration: none;
+    color: #000 !important;
+}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
+
+
+
+@font-face {
+    font-family: Verdana;
+    src: url(../forts/Verdana.ttf) format("tff");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: Verdana-Bold;
+    src: url(../forts/Verdana-Bold.ttf) format("tff");
+    font-style: normal;
+    font-weight: normal;
+}
+body{
+    font-family: Verdana, sans-serif;
+    width: 500px;
+    margin: 0px auto;
+    margin-top: 30px;
+}   
+h4{
+    font-size: 11.2px;
+    padding-top: 15px;
+    margin-bottom: 30px;
+}
+p{
+    font-size: 11px;
+    padding-bottom: 15px;
+    line-height: 16px
+} 
+a{
+    text-decoration: underline;
+}
+.img{
+    height: 100px;
+}
+.content{
+    background-color: #F6F6EFFF;
+}
+.line{
+    height: 4px;
+    background-color: #FF6600FF;
+}
+.podval{
+    height: 60px;
+    background-color:#F6F6EFFF;
+}

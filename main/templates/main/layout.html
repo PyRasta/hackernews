@@ -14,27 +14,50 @@
         <div class="panel">
             <a href="{% url 'home' %}"><img src="{% static  'main/img/favicon.gif' %}" alt="иконка" class="logo"></a>
             <span class="panelurl">
-                <a href="{% url 'home' %}"><strong class="title">Hacker News</strong></a>
-                <a href="{% url 'new' %}" class="url">new</a>
-                |
-                <a href="{% url 'past' %}" class="url">past</a>
-                |
-                <a href="{% url 'comments' %}" class="url">comments</a>
-                |
-                <a href="{% url 'ask' %}" class="url">ask</a>
-                |
-                <a href="{% url 'show' %}" class="url">show</a>
-                |
-                <a href="{% url 'jobs' %}" class="url">jobs</a>
-                |
-                <a href="{% url 'submit' %}" class="url">submit</a>
+                {% if check.flag == True %}
+                    <a href="{% url 'home' %}"><strong class="title">Hacker News</strong></a>
+                    <a href="{% url 'welcome' %}" class="url">welcome</a>
+                    |
+                    <a href="{% url 'new' %}" class="url">new</a>
+                    |
+                    <a href="{% url 'threads' %}" class="url">threads</a>
+                    |
+                    <a href="{% url 'past' %}" class="url">past</a>
+                    |
+                    <a href="{% url 'comments' %}" class="url">comments</a>
+                    |
+                    <a href="{% url 'ask' %}" class="url">ask</a>
+                    |
+                    <a href="{% url 'show' %}" class="url">show</a>
+                    |
+                    <a href="{% url 'jobs' %}" class="url">jobs</a>
+                    |
+                    <a href="{% url 'submit' %}" class="url">submit</a>
+                {% else %}
+                    <a href="{% url 'home' %}"><strong class="title">Hacker News</strong></a>
+                    <a href="{% url 'new' %}" class="url">new</a>
+                    |
+                    <a href="{% url 'past' %}" class="url">past</a>
+                    |
+                    <a href="{% url 'comments' %}" class="url">comments</a>
+                    |
+                    <a href="{% url 'ask' %}" class="url">ask</a>
+                    |
+                    <a href="{% url 'show' %}" class="url">show</a>
+                    |
+                    <a href="{% url 'jobs' %}" class="url">jobs</a>
+                    |
+                    <a href="{% url 'submit' %}" class="url">submit</a>
+                {% endif %}    
+
             </span>
         </div>
         <div class="registor">
             <span class="panelurl">
                 {% if check.flag == True %}
                     <a href="#">{{check.username}}</a>   
-                    <a href="{% url 'logout' %}" class="reg">loginout</a>
+                    |
+                    <a href="{% url 'logout' %}" class="reg">logout</a>
                 {% else %}    
                     <a href="{% url 'logreg' %}" class="reg">login</a>
                 {% endif %}    

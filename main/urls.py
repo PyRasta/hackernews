@@ -13,5 +13,7 @@ urlpatterns = [
     path("submit", views.submit, name="submit"),
     path("logreg", views.logreg, name="logreg"),
     path("logout", views.delete_online, name="logout"),
-
+    path("welcome", views.welcome, name="welcome"),
+    path("threads", views.threads, name="threads"),
+    path("welcome/guidelines", views.guidelines, name="guidelines")
 ]

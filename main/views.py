@@ -47,6 +47,14 @@ def delete_online(request):
     user_delete = FindAccount.objects.get(username = username)  
     user_delete.delete()  
     return redirect('home')
+
+def update_bd(request):
+    user_ip = get_client_ip(request)
+    user_id = get_user_id()
+    user = FindAccount.objects.get(id = user_id)
+    user.ip = user_ip
+    user.save()
+
 def index(request):
     check = check_online(request)
     articls = Article.objects.order_by("id")[:30]   
@@ -55,13 +63,6 @@ def index(request):
         'check': check,
     }
     return render(request, 'main/index.html', contex)
-
-def update_bd(request):
-    user_ip = get_client_ip(request)
-    user_id = get_user_id()
-    user = FindAccount.objects.get(id = user_id)
-    user.ip = user_ip
-    user.save()
 
 def logreg(request):
     find_error = ''
@@ -130,4 +131,12 @@ def jobs(request):
 
 def submit(request):
     return render(request, 'main/submit.html')
-                       
+
+def welcome(request):
+    return render(request, "main/welcome.html")
+
+def guidelines(request):
+    return render(request, "main/guidelines.html")
+
+def threads(request):
+    return render(request, 'main/threads.html')
