@@ -1,6 +1,7 @@
 from django.db.models import fields
-from .models import CreateAccount, FindAccount
-from django.forms import ModelForm, TextInput, HiddenInput
+from django.http.response import FileResponse
+from .models import CreateAccount, FindAccount, Article
+from django.forms import ModelForm, TextInput, HiddenInput, widgets
 
 
 class CreateForm(ModelForm):
@@ -27,4 +28,11 @@ class FindForm(ModelForm):
             'password': TextInput(attrs={
                 "type": "password",
             }),
+        }
+class PostArticle(ModelForm):
+    class Meta:
+        model = Article
+        fields = ["title", "url"]
+        widgets = {
+            
         }
