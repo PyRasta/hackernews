@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="img">
-        <img src="{% static 'main/img/logo.gif' %}" alt="logo">
+        <a href="{% url 'home' %}"><img src="{% static 'main/img/logo.gif' %}" alt="logo"></a>
     </div>
     <div class="content">
         {% block content %}
@@ -19,7 +19,6 @@
     </div>
     <div class="podval">
         <hr class="line">
-        
     </div>
 </body>
 </html>

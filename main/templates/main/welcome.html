@@ -5,11 +5,11 @@ Hacker News: Welcome
 {% endblock %}
 
 {% block content %}
-<h4 class="welcome_title"><b>Welcome to Hacker News</b></h4>
+<h4><b>Welcome to Hacker News</b></h4>
 <p>
     <a href="{% url 'home' %}">Hacker News</a> is a bit different from other community sites, 
     and we'd appreciate it if you'd take a minute to read the following 
-    as well as the <a href="{ url 'guidelines'}">official guidelines.</a>
+    as well as the <a href="{% url 'guidelines' %}">official guidelines.</a>
 </p>    
 <p>
     HN is an experiment. As a rule, a community site that becomes 

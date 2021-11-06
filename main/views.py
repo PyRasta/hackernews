@@ -109,34 +109,36 @@ def logreg(request):
         'create_error': create_error,
         'find_error': find_error
     }
+    global login 
+    login = contex
     return render(request, 'main/reg_log.html', contex)    
 
-def new(request):
-    return render(request, 'main/new.html')
+def new(request, login):
+    return render(request, 'main/new.html', login)
 
-def past(request):
-    return render(request, 'main/past.html')
+def past(request, login):
+    return render(request, 'main/past.html', login)
 
-def comments(request):
-    return render(request, 'main/comments.html')
+def comments(request , login):
+    return render(request, 'main/comments.html', login)
 
-def ask(request):
-    return render(request, 'main/ask.html')
+def ask(request , login):
+    return render(request, 'main/ask.html', login)
 
-def show(request):
-    return render(request, 'main/show.html')
+def show(request , login):
+    return render(request, 'main/show.html', login)
 
-def jobs(request):
-    return render(request, 'main/jobs.html')
+def jobs(request , login):
+    return render(request, 'main/jobs.html', login)
 
-def submit(request):
-    return render(request, 'main/submit.html')
+def submit(request , login):
+    return render(request, 'main/submit.html', login)
 
 def welcome(request):
-    return render(request, "main/welcome.html")
+    return render(request, "main/welcome.html",)
 
 def guidelines(request):
-    return render(request, "main/guidelines.html")
+    return render(request, "main/guidelines.html",)
 
-def threads(request):
-    return render(request, 'main/threads.html')
+def threads(request , login):
+    return render(request, 'main/threads.html', login)
