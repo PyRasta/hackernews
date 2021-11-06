@@ -55,18 +55,10 @@ def update_bd(request):
     user.ip = user_ip
     user.save()
 
-def index(request):
-    check = check_online(request)
-    articls = Article.objects.order_by("id")[:30]   
-    contex = {
-        'articls': articls,
-        'check': check,
-    }
-    return render(request, 'main/index.html', contex)
-
 def logreg(request):
     find_error = ''
     create_error = ''
+    online = FindAccount.objects.all()
     base = CreateAccount.objects.all()
     create_form = CreateForm(request.POST)
     find_form = FindForm(request.POST)
@@ -99,7 +91,7 @@ def logreg(request):
                     find_error = "Неверный пароль" 
 
             if find_error == '':
-                find_error = "Неправильно введено имя пользователя"         
+                find_error = "Неправильно введено имя пользователя"              
 
     create_form = CreateForm()
     find_form = FindForm()
@@ -109,30 +101,65 @@ def logreg(request):
         'create_error': create_error,
         'find_error': find_error
     }
-    global login 
-    login = contex
-    return render(request, 'main/reg_log.html', contex)    
+    return render(request, 'main/reg_log.html', contex)   
 
-def new(request, login):
-    return render(request, 'main/new.html', login)
+def index(request):
+    check = check_online(request)
+    articls = Article.objects.order_by("id")[:30]   
+    contex = {
+        'articls': articls,
+        'check': check,
+    }
+    return render(request, 'main/index.html', contex)     
 
-def past(request, login):
-    return render(request, 'main/past.html', login)
+def new(request):
+    check = check_online(request)
+    contex = {
+        'check': check,
+    }
+    return render(request, 'main/new.html', contex)
 
-def comments(request , login):
-    return render(request, 'main/comments.html', login)
+def past(request):
+    check = check_online(request)
+    contex = {
+        'check': check,
+    }
+    return render(request, 'main/past.html', contex)
 
-def ask(request , login):
-    return render(request, 'main/ask.html', login)
+def comments(request):
+    check = check_online(request)
+    contex = {
+        'check': check,
+    }
+    return render(request, 'main/comments.html', contex)
 
-def show(request , login):
-    return render(request, 'main/show.html', login)
+def ask(request):
+    check = check_online(request)
+    contex = {
+        'check': check,
+    }
+    return render(request, 'main/ask.html', contex)
 
-def jobs(request , login):
-    return render(request, 'main/jobs.html', login)
+def show(request):
+    check = check_online(request)
+    contex = {
+        'check': check,
+    }
+    return render(request, 'main/show.html', contex)
 
-def submit(request , login):
-    return render(request, 'main/submit.html', login)
+def jobs(request):
+    check = check_online(request)
+    contex = {
+        'check': check,
+    }
+    return render(request, 'main/jobs.html', contex)
+
+def submit(request):
+    check = check_online(request)
+    contex = {
+        'check': check,
+    }
+    return render(request, 'main/submit.html', contex)
 
 def welcome(request):
     return render(request, "main/welcome.html",)
@@ -140,5 +167,9 @@ def welcome(request):
 def guidelines(request):
     return render(request, "main/guidelines.html",)
 
-def threads(request , login):
-    return render(request, 'main/threads.html', login)
+def threads(request):
+    check = check_online(request)
+    contex = {
+        'check': check,
+    }
+    return render(request, 'main/threads.html', contex)
