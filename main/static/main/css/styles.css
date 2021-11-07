@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*:before,*:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display:block;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0}
+a, a:visited{
+    text-decoration: none;
+    color: #000 !important;
+}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
+
+
+
+@font-face {
+    font-family: Verdana;
+    src: url(../forts/Verdana.ttf) format("tff");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: Verdana-Bold;
+    src: url(../forts/Verdana-Bold.ttf) format("tff");
+    font-style: normal;
+    font-weight: normal;
+}
+body{
+    font-family: Verdana, sans-serif;
+    margin-top: 5px;
+}
+.uppanel{
+    display: table;
+    background-color: #FF6600FF;
+    width: 85%;
+    margin: 0px auto;
+    margin-top: 7px;
+}
+.logo{
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    margin: 2px;
+}
+.panelurl{
+    vertical-align: -webkit-baseline-middle;
+    font-size: 13px;
+}
+.title{
+    margin-right: 5px;
+}   
+.registor{
+    display: table-cell;
+    text-align: right;
+    padding-right: 4px;
+}
+
+.main{
+    height: 1037px;
+    width: 85%;
+    margin: 0px auto;
+    background-color: #F6F6EFFF;
+}
+.articls{
+    padding-top: 15px;
+}
+.number{
+    color: #8E8E8DFF;
+}
+.article{
+    padding-bottom: 10px;
+    font-size: 13.2px;
+}
+.bottom_title{
+    font-size: 10px;
+    padding-left: 18px;
+    color: #8E8E8DFF;
+}
+.more{
+    font-size: 13px;
+    padding-left: 26px;
+    padding-top: 6px;
+}
+.footer{
+    width: 85%;
+    margin: 0px auto;
+}
+.line{
+    height: 2px;
+    background-color: #FF6600FF;
+}
+.podval{
+    background-color: #F6F6EFFF;;
+    padding-top: 15px;
+    height: 90px;
+    text-align: center;
+    font-size: 11px;
+}
+.fild{
+    font-size: 13px;
+    padding-top: 18px;
+}
+.fild input{
+    height: 20px;
+    width: 146px;
+    border: 1px solid black;
+    border-radius:3px;
+}

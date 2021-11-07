@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static 'main/css/styles_reglog.css' %}">
+    <link rel="shortcut icon" href="{% static 'main/img/favicon.gif' %}" type="image/gif">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker News</title>
+</head>
+<body>
+    <div class="login">
+        <b>Login</b>
+        <form method="POST">
+            {% csrf_token %}
+            username: {{ find_form.username }} <br>
+            password: {{ find_form.password }} <br>
+            <button type="submit">
+                login
+            </button> <br>
+            {{ find_error }}
+        <a href="#">Forgot your password?</a>    
+        </form>
+    </div>    
+    <div class="create">   
+        <b>Create Account</b>
+        <form method="POST">
+            {% csrf_token %}
+            username: {{ create_form.name }} <br>
+            password: {{ create_form.password }} <br>
+            <button type="submit">
+                create account
+            </button>  
+        </form>
+        {{ create_error }}
+    </div>       
+</body>
+</html>

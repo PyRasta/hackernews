@@ -1,0 +1,28 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+Hacker News
+{% endblock %}
+
+{% block articls %}
+
+<div class="articls">
+    {% for el in articls %}
+        <div class="article">
+            <span class="number">
+                {{el.id}}.
+            </span> 
+            <span class="article_title">
+                <a href="{{el.url}}">{{ el.title }}</a>
+                <a href="{{el.url}}">({{ el.url }})</a>  
+                <p class="bottom_title">{{ el.date }}</p>
+            </span>          
+        </div>
+    {% endfor %}  
+</div>    
+<p class="more">
+    <a href="#">More</a>
+</p>
+
+{% endblock %}
+
