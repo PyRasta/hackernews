@@ -102,6 +102,11 @@ body{
     padding-left: 18px;
     color: #8E8E8DFF;
 }
+.url_good{
+    display: inline;
+    font-size: 11px;
+    color: #8E8E8DFF;
+}
 .more{
     font-size: 13px;
     padding-left: 26px;

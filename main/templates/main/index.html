@@ -4,7 +4,7 @@
 Hacker News
 {% endblock %}
 
-{% block articls %}
+{% block articles %}
 
 <div class="articls">
     {% for el in articls %}
@@ -14,7 +14,7 @@ Hacker News
             </span> 
             <span class="article_title">
                 <a href="{{el.url}}">{{ el.title }}</a>
-                <a href="{{el.url}}">({{ el.url }})</a>  
+                <a href="#"><span class="url_good">({{ el.url_good }})</span></a>
                 <p class="bottom_title">{{ el.date }}</p>
             </span>          
         </div>

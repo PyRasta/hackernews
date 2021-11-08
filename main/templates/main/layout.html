@@ -55,17 +55,25 @@
         <div class="registor">
             <span class="panelurl">
                 {% if check.flag == True %}
-                    <a href="#">{{check.username}}</a>   
-                    |
-                    <a href="{% url 'logout' %}" class="reg">logout</a>
-                {% else %}    
+                    {% if check.moder == True %}
+                        <a href="#">Статьи ({{ number }})</a>
+                        |
+                        <a href="#">{{check.username}}(Moderator)</a>
+                        |
+                        <a href="{% url 'logout' %}" class="reg">logout</a>
+                    {% else %}
+                        <a href="#">{{check.username}}</a>
+                        |
+                        <a href="{% url 'logout' %}" class="reg">logout</a>
+                    {% endif %}
+                {% else %}
                     <a href="{% url 'logreg' %}" class="reg">login</a>
-                {% endif %}    
+                {% endif %}
             </span>
         </div>
     </header>
     <main class="main">
-        {% block articls %}
+        {% block articles %}
         {% endblock %}
     </main>
     <footer class="footer">
